@@ -11,32 +11,16 @@
 <!--nav bar from base.html-->
 <div th:replace="base :: navlinks"></div>
 
-<div  class="container-sm">
-    <ul class="list-group">
 
-        <li th:text="${todo.name}" class="list-group-item active" aria-current="true"></li>
-        <li class="list-group-item" ><img th:src="${todo.image}" width="50px"></li>
-        <li th:text="${todo.description}" class="list-group-item"></li>
-        <li  class="list-group-item">Priority: [[${todo.priority}]]</li>
-        <li class="list-group-item">Due Date: [[${todo.date}]]</li>
-        <li class="list-group-item">Is-completed: [[${todo.completed}]]</li>
-    </ul>
+<div class="container-sm">
+    <h2 style="text-align: center">Item deleted!</h2>
 </div>
 
-
-
-<!--update - delete button-->
-<div class="container-sm" style="margin-top: 10px">
-    <button type="button" class="btn btn-success"><a style="color: white" th:href="@{/update/{id}(id=${todo.id})}">Update</a></button>
-    <button type="button" class="btn btn-danger"><a style="color: white" th:href="@{/delete/{id}(id=${todo.id})}">Delete</a></button>
-</div>
 
 
 
 <!--footer from base.html-->
 <div th:replace="base :: footer"></div>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
