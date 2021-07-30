@@ -62,7 +62,9 @@ public class HomeController {
     public String updateTodolist(@PathVariable("id") long id, Model model){
         for (ToDo todo: lists){
             if(id == todo.getId()){
+                lists.remove(todo);
                 model.addAttribute("todo", todo);
+                break;
             }
         }
         return "add";
